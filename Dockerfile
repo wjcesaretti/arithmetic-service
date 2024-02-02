@@ -6,4 +6,3 @@ RUN npm ci --omit=dev
 COPY ./src ./src
 
 CMD npm start
-
