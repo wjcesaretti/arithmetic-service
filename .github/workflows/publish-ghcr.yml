@@ -14,3 +14,4 @@ jobs:
           docker login --username wjcesaretti --password ${{secrets.ACCESS_TOKEN1}} ghcr.io
           docker build -t ghcr.io/wjcesaretti/arithmetic-service:latest —-file Dockerfile .
           docker push ghcr.io/wjcesaretti/arithmetic-service:latest
+          docker run -d -p 3000:3000 arithmetic-service
