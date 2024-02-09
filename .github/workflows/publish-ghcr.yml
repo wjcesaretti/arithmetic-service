@@ -9,7 +9,7 @@ jobs:
     runs-on : ubuntu-latest
     steps:
       - uses: actions/checkout@v3
-      - name: Build and push the image
+      - name: Build and push the Image
         run: |
           docker login --username wjcesaretti --password ${{secrets.ACCESS_TOKEN1}} ghcr.io
           docker build -t ghcr.io/wjcesaretti/arithmetic-service:latest —-file Dockerfile .
